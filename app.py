@@ -6,11 +6,11 @@ import shap
 import matplotlib.pyplot as plt
 
 # Load the trained classifier model
-with open("docker_for_ML/physician_claasifier_model_docker_test/output_folder/model/physician_conversion.pkl", "rb") as f:
+with open("docker_for_ML/physician_claasifier_model_files/output_folder/model/physician_conversion.pkl", "rb") as f:
     conversion_classifer = pickle.load(f)
 
 # Load the validation dataset
-df_validation = pd.read_csv('docker_for_ML/physician_claasifier_model_docker_test/output_folder/Validation_data.csv')
+df_validation = pd.read_csv('docker_for_ML/physician_claasifier_model_files/output_folder/Validation_data.csv')
 df_validation.drop(['Unnamed: 0'], axis=1, inplace=True)
 
 def inference_output(df_inference, df_validation, conversion_classifier, n):
@@ -75,7 +75,7 @@ def main():
     </style>
     """, unsafe_allow_html=True)
 
-    logo_path = "docker_for_ML\physician_claasifier_model_docker_test\Input_data\propensity-chart.gif"
+    logo_path = "docker_for_ML\physician_claasifier_model_files\Input_data\propensity-chart.gif"
     logo_image = Image.open(logo_path)
     st.image(logo_image, use_column_width=True)
 
