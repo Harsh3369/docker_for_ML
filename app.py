@@ -75,7 +75,7 @@ def main():
     </style>
     """, unsafe_allow_html=True)
 
-    logo_path = "physician_claasifier_model_files\Input_data\propensity-chart.gif"
+    logo_path = "physician_claasifier_model_files/Input_data/propensity-chart.gif"
     logo_image = Image.open(logo_path)
     st.image(logo_image, use_column_width=True)
 
